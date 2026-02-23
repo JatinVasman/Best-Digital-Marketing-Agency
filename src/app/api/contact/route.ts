@@ -25,8 +25,11 @@ export async function POST(request: NextRequest) {
     }
 
     await resend.emails.send({
-      from: "Business Volunteers <onboarding@resend.dev>",
-      to: ["contact.businessvolunteers@gmail.com"],
+      from: "Business Volunteers <contact@businessvolunteers.online>",
+      to: [
+        "contact@businessvolunteers.online",
+        "contact.businessvolunteers@gmail.com",
+      ],
       subject: `New Inquiry: ${service || "General"} — ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px;">
