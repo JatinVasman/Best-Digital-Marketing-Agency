@@ -1,39 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Instagram,
-  Facebook,
-  Linkedin,
-  Youtube,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
-
-const socialLinks = [
-  {
-    icon: Instagram,
-    href: "https://www.instagram.com/thebusinessvolunteers/",
-    label: "Instagram",
-  },
-  {
-    icon: Facebook,
-    href: "https://www.facebook.com/people/Business-Volunteers/61579138254807/",
-    label: "Facebook",
-  },
-  {
-    icon: Linkedin,
-    href: "https://www.linkedin.com/company/business-volunteers1",
-    label: "LinkedIn",
-  },
-  {
-    icon: Youtube,
-    href: "https://www.youtube.com/@TheBusinessVolunteers",
-    label: "YouTube",
-  },
-  { icon: Twitter, href: "https://x.com/Business8920", label: "X (Twitter)" },
-];
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const quickLinks = [
   { label: "Services", href: "/#services" },
@@ -69,20 +38,6 @@ export default function Footer() {
               Best Marketing Agency — turning attention into revenue through
               data-driven digital marketing.
             </p>
-            <div className="flex gap-3">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[var(--text-muted)] hover:text-white hover:border-[var(--primary)] hover:bg-[var(--primary)]/10 transition-all"
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -157,26 +112,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Google Map */}
+          {/* Location Map */}
           <div>
-            <h4
-              className="text-sm font-semibold uppercase tracking-wider mb-6 text-white"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Find Us
+            <h4 className="font-heading text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+              Get Directions
             </h4>
-            <div className="rounded-xl overflow-hidden border border-white/10">
+            <a
+              href="https://maps.app.goo.gl/EpeFsJs9NPm7aRFG9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block overflow-hidden rounded-lg border border-white/10 hover:border-green/30 transition-colors"
+            >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.389!2d77.3600!3d28.6279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5456!2sNoida%20Sector%2062!5e0!3m2!1sen!2sin!4v1"
+                src="https://www.google.com/maps?q=https://maps.app.goo.gl/EpeFsJs9NPm7aRFG9&output=embed"
                 width="100%"
-                height="180"
-                style={{ border: 0 }}
+                height="200"
+                style={{
+                  border: 0,
+                  pointerEvents: "none",
+                  filter:
+                    "invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)",
+                }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Business Volunteers Office Location"
+                title="Business Volunteers Location"
               />
-            </div>
+            </a>
           </div>
         </div>
 
