@@ -1,26 +1,296 @@
 @import "tailwindcss";
 
+/* ============================================
+   EMBER & GOLD — Design System
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #e85d3a;
+  --primary-light: #f4845f;
+  --primary-dark: #c23616;
+  --background: #12100e;
+  --surface: #1f1c18;
+  --text: #fffffe;
+  --text-muted: #a89b94;
+  --accent: #e2b74b;
+
+  --font-heading: var(--font-syne);
+  --font-body: var(--font-dm-sans);
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground: var(--text);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-syne);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12100e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e85d3a;
+  border-radius: 3px;
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background: rgba(232, 93, 58, 0.3);
+  color: white;
+}
+
+/* ============================================
+   CARD STYLES — Floating Elevation
+   ============================================ */
+
+.card-elevated {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-elevated:hover {
+  border-color: rgba(232, 93, 58, 0.3);
+  box-shadow:
+    0 8px 25px rgba(232, 93, 58, 0.15),
+    0 20px 50px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+}
+
+/* ============================================
+   GRADIENT MESH BLOBS — Background
+   ============================================ */
+
+@keyframes blob-morph-1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 30px) scale(1.05);
+  }
+}
+
+@keyframes blob-morph-2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-40px, 30px) scale(0.95);
+  }
+  50% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  75% {
+    transform: translate(-20px, -20px) scale(1);
+  }
+}
+
+@keyframes blob-morph-3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, 40px) scale(1.05);
+  }
+  66% {
+    transform: translate(-30px, -30px) scale(0.95);
+  }
+}
+
+/* ============================================
+   PRELOADER
+   ============================================ */
+
+@keyframes ring-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* ============================================
+   MARQUEE
+   ============================================ */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================
+   SECTION CONTAINMENT
+   ============================================ */
+
+.section-contained {
+  contain: layout style paint;
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--accent);
+  color: #12100e;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #d4a73a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(226, 183, 75, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  background: rgba(232, 93, 58, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   MASONRY GRID
+   ============================================ */
+
+.masonry-grid {
+  columns: 2;
+  column-gap: 24px;
+}
+
+.masonry-grid > * {
+  break-inside: avoid;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    columns: 1;
+  }
+}
+
+/* ============================================
+   UTILITY
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  padding-bottom: 0.15em;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
 }
