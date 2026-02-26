@@ -150,6 +150,7 @@ function StructuredData() {
 }
 
 import QuickChat from "@/components/ui/QuickChat";
+import CursorFollower from "@/components/ui/CursorFollower";
 
 export default function RootLayout({
   children,
@@ -160,6 +161,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.variable} ${dmSans.variable}`}>
         <StructuredData />
+        <CursorFollower />
         {children}
         <QuickChat />
         <Analytics />

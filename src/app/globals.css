@@ -294,3 +294,95 @@ h6 {
     padding: 60px 0;
   }
 }
+
+/* ============================================
+   CUSTOM CURSOR
+   ============================================ */
+
+/* Outer ring — follows with smooth lag */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid rgba(232, 93, 58, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Hover state — ring grows and fills slightly */
+.custom-cursor.hovering {
+  width: 40px;
+  height: 40px;
+  border-color: var(--accent);
+  background: rgba(226, 183, 75, 0.1);
+  /* offset the bigger ring to stay centered: 40/2 = 20 shift instead of 12 */
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+/* Inner dot — follows instantly */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000;
+  will-change: transform;
+}
+
+/* Trailing glow — follows with heavy lag */
+.cursor-glow-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 93, 58, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(
+    calc(var(--trail-x, -200px) - 100px),
+    calc(var(--trail-y, -200px) - 100px)
+  );
+  will-change: transform;
+}
+
+/* Full-page soft ambient glow at mouse pos */
+.cursor-glow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 93, 58, 0.03) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(
+    calc(var(--mouse-x, -500px) - 250px),
+    calc(var(--mouse-y, -500px) - 250px)
+  );
+  will-change: transform;
+}
