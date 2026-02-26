@@ -12,7 +12,7 @@ export const blogs: BlogPost[] = [
     title: "Top 10 Best Digital Marketing Agencies in India (2026 Edition)",
     date: "February 23, 2026",
     excerpt:
-      "India’s digital economy is expanding rapidly. Discover the top 10 digital marketing agencies in India that are driving measurable growth and ROI in 2026.",
+      "India’s digital economy is booming. Discover the top 10 digital marketing agencies in India driving measurable growth and ROI in 2026.",
     content: `India’s digital economy is expanding rapidly. With increasing competition across industries, brands require performance-driven, ROI-focused digital marketing partners that can deliver measurable growth.
 
 If you are looking for the best digital marketing agencies in India, this curated list highlights agencies known for strategy, creativity, performance marketing, and brand-building expertise.

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   title: "Best Digital Marketing Agency in India | Business Volunteers",
   description:
-    "Business Volunteers is a results-driven digital marketing agency in India offering social media management, website development, branding, SEO, and performance marketing for growing businesses.",
+    "Business Volunteers — results-driven digital marketing agency in India. Social media, web development, branding, SEO & performance marketing.",
   keywords: [
     "best digital marketing agency India",
     "digital marketing company India",
