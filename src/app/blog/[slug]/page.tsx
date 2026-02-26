@@ -32,6 +32,12 @@ export async function generateMetadata({
       type: "article",
       publishedTime: blog.date,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt,
+      images: ["/logo.webp"],
+    },
   };
 }
 

@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     url: "https://bestmarketingagency.online/blog",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog — Insights & Perspectives | Business Volunteers",
+    description:
+      "Tips, trends, and strategies in digital marketing, branding, web development, and social media from the Business Volunteers team.",
+    images: ["/logo.webp"],
+  },
 };
 
 export default function BlogPage() {

@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     url: "https://bestmarketingagency.online/portfolio",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Social Media Portfolio | Business Volunteers",
+    description:
+      "Explore our social media work — brand campaigns, content designs, and creative projects delivered for clients across industries.",
+    images: ["/logo.webp"],
+  },
 };
 
 const socialImages = Array.from({ length: 18 }, (_, i) => {

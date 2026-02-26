@@ -134,6 +134,128 @@ function StructuredData() {
     ],
   };
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Business Volunteers",
+    image: "https://bestmarketingagency.online/logo.webp",
+    "@id": "https://bestmarketingagency.online",
+    url: "https://bestmarketingagency.online",
+    telephone: "+91-85869-89832",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Noida Sec 62",
+      addressLocality: "Noida",
+      postalCode: "201309",
+      addressRegion: "UP",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 28.6273,
+      longitude: 77.3725,
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "19:00",
+    },
+    priceRange: "$$",
+  };
+
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Our Digital Marketing Services",
+    itemListElement: [
+      {
+        "@type": "Service",
+        position: 1,
+        name: "Social Media Management",
+        description:
+          "Professional management of your social media presence to grow your brand and engage your audience.",
+      },
+      {
+        "@type": "Service",
+        position: 2,
+        name: "Website Development",
+        description:
+          "High-performance, responsive websites tailored to your business goals.",
+      },
+      {
+        "@type": "Service",
+        position: 3,
+        name: "Data Analytics",
+        description:
+          "Insights-driven data analysis to optimize your marketing performance.",
+      },
+      {
+        "@type": "Service",
+        position: 4,
+        name: "Graphic & Poster Design",
+        description:
+          "Creative visual content that communicates your brand message.",
+      },
+      {
+        "@type": "Service",
+        position: 5,
+        name: "Presentation Design",
+        description: "Professional decks that help you win more business.",
+      },
+      {
+        "@type": "Service",
+        position: 6,
+        name: "Logo Design",
+        description: "Unique and memorable brand identities.",
+      },
+      {
+        "@type": "Service",
+        position: 7,
+        name: "Video Editing",
+        description: "High-quality video content for all platforms.",
+      },
+      {
+        "@type": "Service",
+        position: 8,
+        name: "UGC Videos",
+        description: "Authentic user-generated content that builds trust.",
+      },
+      {
+        "@type": "Service",
+        position: 9,
+        name: "CRM Solutions",
+        description: "Smart CRM systems to strengthen customer relationships.",
+      },
+      {
+        "@type": "Service",
+        position: 10,
+        name: "Brochure Design",
+        description: "Professional print and digital marketing materials.",
+      },
+      {
+        "@type": "Service",
+        position: 11,
+        name: "WhatsApp Business Setup",
+        description:
+          "Streamlined customer communication via WhatsApp Business.",
+      },
+      {
+        "@type": "Service",
+        position: 12,
+        name: "Google Business Setup",
+        description: "Optimized Google Business profiles for local search.",
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -147,6 +269,16 @@ function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
     </>
   );
