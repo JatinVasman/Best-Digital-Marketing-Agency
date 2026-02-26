@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Social Media Portfolio | Business Volunteers",
   description:
-    "Explore our social media work — brand campaigns, content designs, and creative projects delivered for clients across industries.",
+    "Explore our social media portfolio — brand campaigns, content designs, and creative projects delivered for clients across industries by Business Volunteers.",
   alternates: {
     canonical: "https://bestmarketingagency.online/portfolio",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Social Media Portfolio | Business Volunteers",
     description:
-      "Explore our social media work — brand campaigns, content designs, and creative projects delivered for clients across industries.",
+      "Explore our social media portfolio — brand campaigns, content designs, and creative projects delivered for clients across industries by Business Volunteers.",
     images: ["/logo.webp"],
   },
 };
