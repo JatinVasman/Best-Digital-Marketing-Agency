@@ -18,7 +18,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://businessvolunteers.online"),
+  metadataBase: new URL("https://bestmarketingagency.online"),
+  verification: {
+    google: "4EbWl68EzlLFhEbzmTBc7qEaXp5pq6cUD0VM071q650",
+  },
   title: "Best Digital Marketing Agency in India | Business Volunteers",
   description:
     "Business Volunteers is a results-driven digital marketing agency in India offering social media management, website development, branding, SEO, and performance marketing for growing businesses.",
@@ -37,13 +40,13 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   alternates: {
-    canonical: "https://businessvolunteers.online",
+    canonical: "https://bestmarketingagency.online",
   },
   openGraph: {
     title: "Best Digital Marketing Agency in India | Business Volunteers",
     description:
       "Results-driven digital marketing agency in India — social media management, website development, branding, SEO, and performance marketing.",
-    url: "https://businessvolunteers.online",
+    url: "https://bestmarketingagency.online",
     siteName: "Business Volunteers",
     images: [
       {
@@ -74,8 +77,8 @@ function StructuredData() {
     "@type": "Organization",
     name: "Business Volunteers",
     alternateName: "Best Marketing Agency",
-    url: "https://businessvolunteers.online",
-    logo: "https://businessvolunteers.online/logo.webp",
+    url: "https://bestmarketingagency.online",
+    logo: "https://bestmarketingagency.online/logo.webp",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+91-85869-89832",
@@ -105,13 +108,13 @@ function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Business Volunteers",
-    url: "https://businessvolunteers.online",
+    url: "https://bestmarketingagency.online",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
         urlTemplate:
-          "https://businessvolunteers.online/blog?q={search_term_string}",
+          "https://bestmarketingagency.online/blog?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -122,12 +125,12 @@ function StructuredData() {
     "@type": "SiteNavigationElement",
     name: ["Home", "Services", "Portfolio", "About", "Blog", "Contact"],
     url: [
-      "https://businessvolunteers.online/",
-      "https://businessvolunteers.online/#services",
-      "https://businessvolunteers.online/#work",
-      "https://businessvolunteers.online/#about",
-      "https://businessvolunteers.online/blog",
-      "https://businessvolunteers.online/#contact",
+      "https://bestmarketingagency.online/",
+      "https://bestmarketingagency.online/#services",
+      "https://bestmarketingagency.online/#work",
+      "https://bestmarketingagency.online/#about",
+      "https://bestmarketingagency.online/blog",
+      "https://bestmarketingagency.online/#contact",
     ],
   };
 

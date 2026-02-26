@@ -23,12 +23,12 @@ export async function generateMetadata({
     title: `${blog.title} | Business Volunteers Blog`,
     description: blog.excerpt,
     alternates: {
-      canonical: `https://businessvolunteers.online/blog/${blog.slug}`,
+      canonical: `https://bestmarketingagency.online/blog/${blog.slug}`,
     },
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
-      url: `https://businessvolunteers.online/blog/${blog.slug}`,
+      url: `https://bestmarketingagency.online/blog/${blog.slug}`,
       type: "article",
       publishedTime: blog.date,
     },
@@ -45,19 +45,19 @@ function BlogPostingSchema({ blog }: { blog: (typeof blogs)[0] }) {
     author: {
       "@type": "Organization",
       name: "Business Volunteers",
-      url: "https://businessvolunteers.online",
+      url: "https://bestmarketingagency.online",
     },
     publisher: {
       "@type": "Organization",
       name: "Business Volunteers",
       logo: {
         "@type": "ImageObject",
-        url: "https://businessvolunteers.online/logo.webp",
+        url: "https://bestmarketingagency.online/logo.webp",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://businessvolunteers.online/blog/${blog.slug}`,
+      "@id": `https://bestmarketingagency.online/blog/${blog.slug}`,
     },
   };
 

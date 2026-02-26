@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Explore our social media work — brand campaigns, content designs, and creative projects delivered for clients across industries.",
   alternates: {
-    canonical: "https://businessvolunteers.online/portfolio",
+    canonical: "https://bestmarketingagency.online/portfolio",
   },
   openGraph: {
     title: "Social Media Portfolio | Business Volunteers",
     description:
       "Explore our social media work — brand campaigns, content designs, and creative projects.",
-    url: "https://businessvolunteers.online/portfolio",
+    url: "https://bestmarketingagency.online/portfolio",
     type: "website",
   },
 };

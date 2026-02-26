@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Tips, trends, and strategies in digital marketing, branding, web development, and social media from the Business Volunteers team.",
   alternates: {
-    canonical: "https://businessvolunteers.online/blog",
+    canonical: "https://bestmarketingagency.online/blog",
   },
   openGraph: {
     title: "Blog — Insights & Perspectives | Business Volunteers",
     description:
       "Tips, trends, and strategies in digital marketing, branding, web development, and social media.",
-    url: "https://businessvolunteers.online/blog",
+    url: "https://bestmarketingagency.online/blog",
     type: "website",
   },
 };
